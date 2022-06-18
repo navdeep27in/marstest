@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: navdeepinmarstest 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: navdeepinmarstest
+  template:
+    metadata:
+      labels:
+        app: navdeepinmarstest 
+    spec:
+      containers:
+        - name: navdeepinmarstest 
+          image: testacrayr.azurecr.io/navdeepinmarstest
+          ports:
+          - containerPort: 8080
